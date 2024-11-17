@@ -19,7 +19,7 @@ int main() {
         }
         
         std::cout << "Введите пожалуйста строку:\n";
-        char* line = readLine();
+        char* line = readLine(std::cin);
         std::cout << "Введенная вами строка:\n" << line << '\n';
 
         unsigned long size = strlen(line);

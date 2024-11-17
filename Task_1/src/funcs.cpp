@@ -15,17 +15,17 @@ int readIntegerInLine() {
     return inputValue;
 }
 
-char* readLine() {
+char* readLine(std::istream& in) {
     const int buffer_size = 128;
     int curr_size = buffer_size;
     char* buffer = new char[curr_size];
     unsigned long indx = 0;
     char ch;
-    while ((ch = getchar()) != '\n' && ch != EOF) {
+    while (in.get(ch) && ch != '\n' && ch != EOF) {
         if (indx + 1 >= curr_size) {
             curr_size *= 2;
             char* new_buffer = new char[curr_size];
-            std::copy(buffer, buffer + indx, new_buffer); 
+            std::copy(buffer, buffer + indx, new_buffer);
             delete[] buffer;
             buffer = new_buffer;
         }

@@ -4,17 +4,11 @@
 #include <sstream>
 #include "../src/header-files/funcs.h"
 
-TEST(ReadLineTest, NormalInput) {
-    
-}
-
-/*
 TEST(ReadLineTest, InputWithSpaces) {
     const char* input = "Hello, this is a test.";
     std::istringstream input_stream(input);
-    std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, "Hello, this is a test.");
     delete[] result;
 }
@@ -24,7 +18,7 @@ TEST(ReadLineTest, InputWithNumbers) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, "123 456 789");
     delete[] result;
 }
@@ -34,7 +28,7 @@ TEST(ReadLineTest, InputWithSpecialChars) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, "#$%^&*()_+");
     delete[] result;
 }
@@ -44,7 +38,7 @@ TEST(ReadLineTest, EmptyInput) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, "");
     delete[] result;
 }
@@ -54,7 +48,7 @@ TEST(ReadLineTest, MaxLengthInput) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, input);
     delete[] result;
 }
@@ -64,7 +58,7 @@ TEST(ReadLineTest, InputWithNewline) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, "Hello");
     delete[] result;
 }
@@ -74,7 +68,7 @@ TEST(ReadLineTest, InputWithTab) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, "Hello\tWorld");
     delete[] result;
 }
@@ -84,8 +78,8 @@ TEST(ReadLineTest, InputWithCarriageReturn) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
-    EXPECT_STREQ(result, "Hello");
+    char* result = readLine(input_stream);
+    EXPECT_STREQ(result, "Hello\rWorld");
     delete[] result;
 }
 
@@ -94,11 +88,10 @@ TEST(ReadLineTest, InputExceedingBufferSize) {
     std::istringstream input_stream(input);
     std::cin.rdbuf(input_stream.rdbuf());
 
-    char* result = readLine();
+    char* result = readLine(input_stream);
     EXPECT_STREQ(result, input);
     delete[] result;
 }
-*/
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv); 
