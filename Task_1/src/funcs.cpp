@@ -16,8 +16,8 @@ int readIntegerInLine() {
 }
 
 char* readLine(std::istream& in) {
-    const int buffer_size = 128;
-    int curr_size = buffer_size;
+    const unsigned long buffer_size = 128;
+    unsigned long curr_size = buffer_size;
     char* buffer = new char[curr_size];
     unsigned long indx = 0;
     char ch;
@@ -39,7 +39,7 @@ void getNumbersSubStrings(char* line, unsigned long size) {
     unsigned long capacity = 8;
     unsigned long count = 0;
     char** numbers = new char*[capacity];
-    for (size_t i = 0; i < size;) {
+    for (unsigned long i = 0; i < size;) {
         if (std::isdigit(line[i])) {
             unsigned long start = i;
             while (i < size && std::isdigit(line[i])) {
@@ -64,9 +64,9 @@ void getNumbersSubStrings(char* line, unsigned long size) {
         }
     }
     if (!count) {
-        std::cout << "\nНет чисел в заданной строке\n\n"; 
+        std::cout << '\n' << "Нет чисел в заданной строке\n\n"; 
     } else {
-        std::cout << "\nНайденные числа в строке:\n";
+        std::cout << '\n' << "Найденные числа в строке:\n";
         for (unsigned long i = 0; i < count; ++i) {
             std::cout << numbers[i] << '\n';
         }
