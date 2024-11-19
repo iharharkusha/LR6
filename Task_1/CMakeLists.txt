@@ -25,12 +25,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 set(SRCS
     src/main.cpp
-    src/funcs.cpp
+    src/utils.cpp
     src/constants.cpp
 )
 
 set(TESTS_NECESSITY
-    src/funcs.cpp
+    src/utils.cpp
     src/constants.cpp
 )
 

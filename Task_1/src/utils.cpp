@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits>
 #include "./header-files/constants.h"
-#include "./header-files/funcs.h"
+#include "./header-files/utils.h"
 
 int readIntegerInLine() {
     int inputValue;

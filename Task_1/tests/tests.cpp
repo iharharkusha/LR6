@@ -2,7 +2,7 @@
 #include <iostream>
 #include <gtest/gtest.h>
 #include <sstream>
-#include "../src/header-files/funcs.h"
+#include "../src/header-files/utils.h"
 
 TEST(ReadLineTest, InputWithSpaces) {
     const char* input = "Hello, this is a test.";

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include "./header-files/constants.h"
-#include "./header-files/funcs.h"
+#include "./header-files/utils.h"
 
 int main() {
     std::cout << "Задание 1. Из строки, состоящей из букв, цифр, запятых, точек, знаков + (плюс) ";
