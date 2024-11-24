@@ -32,25 +32,22 @@ int readIntegerInLine() {
         }
         return -INF;
     }
+
+    //очищаем буфер от символа перехода строки чтобы все работало четко
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     return inputValue;
 }
 
 bool isValidUtf8Char(const char* utf8_char) {
-    //находим длину символа
     unsigned int len = strlen(utf8_char);
 
-    //если длина вдруг 0 либо больше 4 байт то это точно не utf8 символ
     if (len == 0 || len > 4) {
         return false;
-    }
+    }   
 
-    //статик каст
     unsigned char c = static_cast<unsigned char>(utf8_char[0]);
 
-    //переменная
     unsigned int expected_length = 1;
-    //побитовые маски чтобы узнать длину символа в байтах
     if ((c & 0b11110000) == 0b11110000) {
         expected_length = 4;
     } else if ((c & 0b11100000) == 0b11100000) {
@@ -59,12 +56,10 @@ bool isValidUtf8Char(const char* utf8_char) {
         expected_length = 2;
     }
 
-    //если длины не совпадают по какой-либо причине то результат соответственно
     if (len != expected_length) {
         return false;
     }
 
-    //последующие байты соответствуют формату UTF-8 (10xxxxxx)
     for (unsigned int i = 1; i < len; ++i) {
         if ((utf8_char[i] & 0b11000000) != 0b10000000) {
             return false;
