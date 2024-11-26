@@ -1,8 +1,11 @@
 #include <iostream>
 
+
+
 bool isLetter(char ch) {
     return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z');
 }
+
 
 unsigned int getBetweenSequenceSize(const char* text, const char* start, const char* end) {
     unsigned int size = 0;

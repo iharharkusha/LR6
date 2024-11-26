@@ -97,7 +97,6 @@ void func(const char* text, unsigned int size) {
 int main() {
     char text[] = "hello world";
     unsigned int size = l(text);
-    /*
     std::cout << "Введите символ:\n";
     char utf8_char[16]; 
     while (true) {
@@ -108,7 +107,6 @@ int main() {
         }
         break;
     }  
-    */ 
     func(text, size);
     return 0;
 }
