@@ -65,7 +65,7 @@ bool isValidUtf8Char(const char* utf8_char) {
             return false;
         }
     }
-
+    
     return true;
 }
 

@@ -72,16 +72,16 @@ unsigned int getBetweenSequenceSize(const char* text, const char* start, const c
 }
 
 char* getBetweenSequence(const char* text, const char* start, const char* end, const unsigned int size) {
-    char* result_sequence = new char[size];
+    char* between_sequence = new char[size];
 
     unsigned int indx = 0;
     while (start != end) {
-        result_sequence[indx] = *start;
+        between_sequence[indx] = *start;
         start += 1;
         indx += 1;
     }
 
-    return result_sequence;
+    return between_sequence;
 }
 
 char* extractWordFromCollocation(const int word_size, char* start_ptr, const char* end_ptr) {
