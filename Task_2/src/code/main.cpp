@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./header-files/constants.h"
-#include "./header-files/utils.h"
+#include "../header-files/constants.h"
+#include "../header-files/utils.h"
 
 int main() {
     std::cout << "Задание 2. В тексте удалить указанный символ везде, где он встречается.\n";

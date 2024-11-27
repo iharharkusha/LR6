@@ -1,7 +1,7 @@
 #include <iostream>
-#include "./header-files/iofuncs.h"
-#include "./header-files/constants.h"
-#include "./header-files/logic.h"
+#include "../header-files/iofuncs.h"
+#include "../header-files/constants.h"
+#include "../header-files/logic.h"
 
 int main() {
     std::cout << "Задание 3. Написать функцию, меняющую местами все четные и нечетные слова в строке.\n";
@@ -40,7 +40,7 @@ int main() {
             task3(text, type_eng);
         }
         else if (type == 2) {
-            if (getUtf8CharLength(text) == 2) {
+            if (getUtf8CharLength(text) == 1) {
                 delete[] text;
                 std::cout << "Необходимо было ввести русский текст!\n";
                 continue;
@@ -49,6 +49,7 @@ int main() {
             type_eng = false;
             task3(text, type_eng);
         } 
+        printText(text); 
         delete[] text;
     }
     return 0;

@@ -24,16 +24,16 @@ endif()
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 set(SRCS
-    src/main.cpp
-    src/logic.cpp
-    src/iofuncs.cpp
-    src/constants.cpp
+    src/code/main.cpp
+    src/code/logic.cpp
+    src/code/iofuncs.cpp
+    src/code/constants.cpp
 )
 
 set(TESTS_NECESSITY
-    src/logic.cpp
-    src/iofuncs.cpp
-    src/constants.cpp
+    src/code/logic.cpp
+    src/code/iofuncs.cpp
+    src/code/constants.cpp
 )
 
 set(TEST_SRCS

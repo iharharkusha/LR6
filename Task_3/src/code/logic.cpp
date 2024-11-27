@@ -1,4 +1,4 @@
-#include "./header-files/iofuncs.h"
+#include "../header-files/iofuncs.h"
 
 unsigned int getUtf8CharLength(const char* utf8_char) { 
     unsigned char c = static_cast<unsigned char>(utf8_char[0]);
@@ -255,8 +255,6 @@ void task3(char* text, bool type_eng) {
     getTextData(text, ptrs_to_words, ptrs_to_sizes, current_capacity, words_total, temp_indx, ptr_byte_step);
     words_total = decreaseIfOdd(words_total);
     swapWordsInText(text, ptrs_to_words, ptrs_to_sizes, words_total, temp_indx, ptr_byte_step);
-
-    printText(text); 
 
     delete[] ptrs_to_words;
     delete[] ptrs_to_sizes;

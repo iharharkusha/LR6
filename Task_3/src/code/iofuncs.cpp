@@ -1,6 +1,6 @@
 #include <iostream>
 #include <limits>
-#include "./header-files/constants.h"
+#include "../header-files/constants.h"
 
 int readIntegerInLine() {
     int inputValue;

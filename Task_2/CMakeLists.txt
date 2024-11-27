@@ -24,14 +24,14 @@ endif()
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 set(SRCS
-    src/main.cpp
-    src/utils.cpp
-    src/constants.cpp
+    src/code/main.cpp
+    src/code/utils.cpp
+    src/code/constants.cpp
 )
 
 set(TESTS_NECESSITY
-    src/utils.cpp
-    src/constants.cpp
+    src/code/utils.cpp
+    src/code/constants.cpp
 )
 
 set(TEST_SRCS

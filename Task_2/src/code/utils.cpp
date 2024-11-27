@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <limits>
-#include "./header-files/constants.h"
+#include "../header-files/constants.h"
 
 char* readText(std::istream& in) {
     const unsigned long buffer_size = 128;
