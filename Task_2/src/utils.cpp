@@ -1,42 +1,6 @@
 #include <iostream>
 #include <cstring>
-#include <limits>
-#include "../header-files/constants.h"
-
-char* readText(std::istream& in) {
-    const unsigned long buffer_size = 128;
-    unsigned long curr_size = buffer_size;
-    char* buffer = new char[curr_size]; 
-    unsigned long indx = 0;
-    
-    char ch;
-    while (in.get(ch) && ch != '\n') {
-        if (indx + 1 >= curr_size) {
-            curr_size *= 2;
-            char* new_buffer = new char[curr_size]; 
-            std::copy(buffer, buffer + indx, new_buffer);
-            delete[] buffer;
-            buffer = new_buffer;
-        }
-        buffer[indx++] = ch;
-    }
-    buffer[indx] = '\0';
-    return buffer;
-}
-
-int readIntegerInLine() {
-    int inputValue;
-    if (!(std::cin >> inputValue) || (std::cin.peek() != '\n')) {
-        std::cin.clear();
-        while (std::cin.get() != '\n') {
-        }
-        return -INF;
-    }
-
-    //очищаем буфер от символа перехода строки чтобы все работало четко
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    return inputValue;
-}
+#include "../../general/header-files/constants.h"
 
 bool isValidUtf8Char(const char* utf8_char) {
     unsigned int len = strlen(utf8_char);
@@ -45,7 +9,7 @@ bool isValidUtf8Char(const char* utf8_char) {
         return false;
     }   
 
-    unsigned char c = static_cast<unsigned char>(utf8_char[0]);
+    char c = utf8_char[0];
 
     unsigned int expected_length = 1;
     if ((c & 0b11110000) == 0b11110000) {
@@ -88,7 +52,7 @@ char* removeUtf8Char(const char* text, const char* utf8_char) {
     const char* text_ptr = text;
 
     while (*text_ptr != '\0') {
-        unsigned char c = static_cast<unsigned char>(*text_ptr);
+        char c = *text_ptr;
 
         unsigned int char_size = 1;
         if ((c & 0b11110000) == 0b11110000) {

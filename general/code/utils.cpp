@@ -11,16 +11,9 @@ int readIntegerInLine() {
         return -INF;
     }
 
+    //очищаем буфер от символа перехода строки чтобы все работало четко
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     return inputValue;
-}
-
-void printSelectedLanguage(const int type) {
-    if (type == 1) {
-        std::cout << "Выбранный язык ввода: английский 🏴󠁧󠁢󠁥󠁮󠁧󠁿\n";
-    } else if (type == 2) {
-        std::cout << "Выбранный язык ввода: русский 🇷🇺\n";
-    }
 }
 
 char* readText(std::istream& in) {
@@ -42,12 +35,4 @@ char* readText(std::istream& in) {
     }
     buffer[indx] = '\0';
     return buffer;
-}
-
-void printText(const char* text) {
-    while (*text != '\0') {
-        std::cout << *text;
-        ++text;
-    }
-    std::cout << '\n';
 }

@@ -1,7 +1,7 @@
 #include "../header-files/iofuncs.h"
 
 unsigned int getUtf8CharLength(const char* utf8_char) { 
-    unsigned char c = static_cast<unsigned char>(utf8_char[0]);
+    char c = utf8_char[0];
 
     unsigned int expected_length = 1;
     if ((c & 0b11110000) == 0b11110000) {

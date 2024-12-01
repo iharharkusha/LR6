@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <cstring>
-#include "../src/header-files/utils.h"
+#include "../header-files/utils.h"
 
 // Тест 1: Проверка на корректную работу с одним байтом (ASCII символ)
 TEST(RemoveUtf8CharTest, RemoveSingleAsciiChar) {

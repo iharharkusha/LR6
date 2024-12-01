@@ -1,16 +1,2 @@
-Task_1/build/CMakeFiles/
-Task_1/build/cmake_install.cmake
-Task_1/build/CMakeCache.txt
-Task_1/build/Makefile
-Task_2/build/CMakeFiles/
-Task_2/build/cmake_install.cmake
-Task_2/build/CMakeCache.txt
-Task_2/build/Makefile
-Task_3/src/main
-Task_3/build/CMakeFiles/
-Task_3/build/cmake_install.cmake
-Task_3/build/CMakeCache.txt
-Task_3/build/Makefile
-Task_3/build/main
 .vscode
-
+main_build/

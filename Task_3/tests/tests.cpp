@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/header-files/logic.h"
+#include "../header-files/logic.h"
 
 TEST(GetUtf8CharLengthTests, HandlesAscii) {
     EXPECT_EQ(getUtf8CharLength("A"), 1);

@@ -1,10 +1,10 @@
 #include <iostream>
-#include "../header-files/constants.h"
+#include "../../general/header-files/utils.h"
+#include "../../general/header-files/constants.h"
 #include "../header-files/utils.h"
 
-int main() {
+void task2() {
     std::cout << "Задание 2. В тексте удалить указанный символ везде, где он встречается.\n";
-    std::cout << "Выполнил Гаркуша Игорь Вячеславович, группа 453502\n\n";
     while (true) {
         std::cout << "Введите 1 для запуска программы, 0 для ее завершения:\n";
         int type = readIntegerInLine();
@@ -36,5 +36,4 @@ int main() {
         std::cout << "Обработанный текст:\n" << txt2 << '\n';
         delete[] txt2; 
     }
-    return 0;
 }

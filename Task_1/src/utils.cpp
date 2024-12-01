@@ -1,19 +1,6 @@
 #include <iostream>
-#include <limits>
-#include "../header-files/constants.h"
+#include "../../general/header-files/constants.h"
 #include "../header-files/utils.h"
-
-int readIntegerInLine() {
-    int inputValue;
-    if (!(std::cin >> inputValue) || (std::cin.peek() != '\n')) {
-        std::cin.clear();
-        while (std::cin.get() != '\n') {
-        }
-        return -INF;
-    }
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    return inputValue;
-}
 
 char* readLine(std::istream& in) {
     const unsigned long buffer_size = 128;

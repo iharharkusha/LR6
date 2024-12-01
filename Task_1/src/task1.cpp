@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cstring>
-#include "../header-files/constants.h"
+#include "../../general/header-files/utils.h"
+#include "../../general/header-files/constants.h"
 #include "../header-files/utils.h"
 
-int main() {
+void task1() {
     std::cout << "Задание 1. Из строки, состоящей из букв, цифр, запятых, точек, знаков + (плюс) ";
     std::cout << "и – (минус), выделить подстроку, которая соответствует записи целого числа.\n\n";
-    std::cout << "Выполнил Гаркуша Игорь Вячеславович, группа 453502\n\n";
     while (true) {
         std::cout << "Введите 1 для запуска программы, 0 для ее завершения:\n";
         int type = readIntegerInLine();
@@ -27,7 +27,6 @@ int main() {
         delete[] line;
         line = nullptr;
     }
-    return 0;
 }
 
 
